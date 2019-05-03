@@ -5,7 +5,7 @@ class App extends Component {
     super()
     this.state = {
       firstName: "",
-      lastName:""
+      lastName: ""
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -19,9 +19,9 @@ class App extends Component {
   render() {
     return (
       <form>
-        <input type="text" name="firstName" placeholder="First Name" onChange={this.handleChange} />
+        <input type="text" value={this.state.firstName} name="firstName" placeholder="First Name" onChange={this.handleChange} />
         <br />
-        <input type="text" name="lastName" placeholder="Last Name" onChange={this.handleChange} />
+        <input type="text" value={this.state.lastName} name="lastName" placeholder="Last Name" onChange={this.handleChange} />
         <h1>{this.state.firstName} {this.state.lastName}</h1>
       </form>
     )
